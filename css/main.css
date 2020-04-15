@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+#container{}
+
+.mainSlider{
+    position: relative;
+    height:480px;/*크기 이미지와 약간달라서 조정*/
+    overflow: hidden;/*스크롤숨김(내영역에만 이미지 보려고)*/
+}
+.mainSlider img{
+    position: absolute;/*메인슬라이더 부모를 내버려두고 이미지정렬을 위해*/
+    left:50%;/*가운데정렬을 위해*/
+    margin-left: -960px;
+}
+/*가로스크롤이 생김->백그라운드로 주거나 이미지 포지션앱솔루트로*/
+
+/*메인컨텐츠전체*/
+
+.mainConWrap{}
+
+.mainCon01{
+    padding: 50px 0;
+}
+
+.con01{
+    float: left;
+    margin-right: 35px;
+    width:205px;
+}
+.con01 h3{}
+.con01 a{}
+.con01 img{}
+
+.mall{
+    width: 405px;
+    font-size: 13px;/*글자속성은 부모한테서 물려받으므로 p태그와 li텍스트크기조정을 위해*/
+}
+.mall p{
+    color:#555;
+    padding:20px 0;
+}
+.mall ul{
+    padding: 20px 0;
+}
+.mall li{
+    float: left;
+    text-align: center;
+    width:130px;
+    background:url(../images/mall_bar01.gif) no-repeat;
+}
+.mall li:first-child{
+    background:#fff;
+    /*background:none;*/
+}
+.mall li a{
+    color: #555;
+}
+.mall li img{
+    display: block;
+    margin:0 auto;
+    /*이미지인라인요소를 블록으로 바꿔서 글자를 아래로 내리기위해, 이러면 텍스트어라인센터가 안먹기때문에 마진0 오토준다*/
+}
+
+/*mainCon02*/
+.mainCon02{}
+.mainCon02 a{
+    display: block;/*a태그엔 안줘도상관없음*/
+}
+.mainCon02 div{
+    float: left;
+}
+.mainCon02 img{
+    display: block;
+}
+/*a태그만 줬을경우 a태그는 인라인요소라서 엔터때문에 빈공간이 생기는데(div는 블록)*/
+/*div도 줄바꿈의 경우 이미지(인라인요소)와 블록사이에 공백이 생기는데 이경우 이미지를 블록으로바꿔주면 사라진다.*/
+/*.mainCon02{
+    font-size: 0;엔터때문에 이미지사이에 공백생김
+}
+.mainCon02 a{
+    display: inline-block;폰트사이즈 0줘서 a가 잡히지않으므로 인라인블럭준다
+}
+.mainCon02 div{
+    float: left;
+}
+.mainCon02 img{}*/
+
+/*mainCon03*/
+.mainCon03{
+    padding: 50px 0;
+    border-bottom: 2px red solid;
+    margin-bottom: ;30px
+}
+
+.con03{
+    float: left;
+    width:205px;
+    margin-right: 35px;
+    font-size: 12px;
+    color: #555;
+}
+.con03:last-child{
+    margin:0;
+}
+.con03 h3{}
+.con03 a{
+    color:#555;
+}
+.con03 p{
+    margin:10px 0;
+}
+
+/*버튼-바로가기 세로중앙정렬*/
+.moreBtn{}
+.moreBtn img, moreBtn span{
+    vertical-align: middle;
+}
+
+.news h3{
+    margin-bottom: 10px;
+}
+.news li{
+    position: relative;
+    line-height: 16px;/*행간*/
+}
+.news li a{
+    width:150px;
+    display: inline-block;
+    /*아래는 점처리하는방법->가로값이 정해져있을때*/
+    white-space: nowrap;/*두줄도 강제로 한줄로만듦*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news li span{
+    position: absolute;
+    right:0;
+}
+
+.con03Quick li{
+    float: left;
+    padding:0 5px;
+}
+.con03Quick li img{
+    display:block;
+    margin:0 auto;
+}
+
+/*mainCon04*/
+
+/*
+.mainCon04{
+}
+
+.con04Tit{}
+.con04Tit h2{
+    float:left;플루트래프트되있으면 버티컬 얼라인안먹음 -> 버티컬얼라인은 인라인요소에만먹는다
+}
+.con04Tit h2 img{}
+
+.con04Tit ul{
+    float:left;
+}
+.con04Tit li{
+    float:left;
+    margin-left: 5px;
+    margin-top:7px;
+}
+.con04Tit a{}
+.con04Tit ul img{}
+*/
+
+.mainCon04{}
+
+.mainCon04 h2{
+    font-size: 0;
+    padding: 20px 0;
+}
+.mainCon04 h2 a, .mainCon04 h2 img{
+    vertical-align: middle;
+    margin-right:3px;
+}
+/*.mainCon04 h2 li{
+    float: left;
+}*/
+
+.con04Box{
+}
+.con04Box div{
+    width:205px;
+    margin-right: 35px;
+    float: left;
+    font-size:12px;
+    background: url("../images/48_48.png") no-repeat left center;
+    padding-left: 50px;
+    box-sizing: border-box;/*가로값줄여도됨*/
+    
+}
+.con04Box div:hover{
+    background-image:url("../images/48_48_on.png");
+}
+.con04Box div:last-child{
+    margin:0;
+}
+.con04Box a{
+    color:#555;
+}
+.con04Box p{
+    color:#36f;
+}

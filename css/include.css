@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+/*header*/
+#header{
+    position:relative;
+}
+#header h1{
+    text-align:center;
+    padding-top:50px;
+}
+#header h1 a{}
+#header h1 img{}
+
+.gnbWrap{
+    text-align: center;
+    padding-top:20px;
+    font-size: 0;
+}
+.gnb{
+    display:inline-block;
+}
+.gnb> li{/*첫번째li한테만*/
+    float:left;
+    padding:0 30px;/*.lnb left:0;*/
+    position:relative;
+}
+.gnb li a{}
+.gnb li img{}
+
+/*호버*/
+.gnb .on{
+    display: none;
+}
+.gnb li:hover .on{
+    display: block;/*none반대*/
+}
+.gnb li:hover .off{
+    display: none;
+}
+
+/*메뉴호버*/
+.lnb{
+    width:100%;
+    left:0;/*padding: 0 30px*/
+    top:25;
+    line-height: 30px;
+    background:lightgray;
+    position:absolute;
+    z-index: 1;/*얘는 픽셀붙이면안됨*/
+    display: none;
+}
+.gnb li:hover .lnb{
+    display:block;
+}
+.lnb a{
+    display: block;
+    font-size: 13px;
+}
+.lnb li a:hover{
+    background:gray;
+    color:white;
+}
+.headerQuick{
+    position: absolute;/*li두개가 겹치니까 부모를 띄움*/
+}
+.headerQuick li{
+    width:99px;
+    height:76px;
+    text-align: center;
+    float:left;
+}
+.headerQuick .hQuick02 img{
+    padding-top:20px;
+}
+.headerQuick a{
+    display:block;
+    height:100%;
+}
+.headerQuick img{}
+
+.utill{
+    position:absolute;
+    top:20px;
+    right:0;
+}
+.utill li{
+    float:left;
+}
+
+.utill li:after{/*선 a나 li주는거나 비슷하지만 a에주면 같이 링크가 걸림*/
+    content:"";
+    display:inline-block;/*...*/
+    vertical-align:middle;
+    width:1px;
+    height: 8px;
+    background: #000;
+    margin: 0 5px;
+}
+
+.utill li:last-child:after{/*마지막자식의 바 없애기*/
+    display: none;
+}
+
+.utill a{
+    vertical-align: middle; /*두개 서로 중앙정렬하기때문에 두개가 있어야함*/
+} 
+/*util 리스트에 바 추가하기
+1.utill 클레스에 li값에 after를 준다.
+2.alfer틀 태그처럼 만든다.
+3.태그처럼만든 after를 선값으로 만들다
+4.선값은 가로 1 세로 9 주고 색상을 준다.
+5.글자와 선을 세로 중앙정렬한다.
+6.정렬이 긑난후 마지막 선값은 안보임처리한다.*/
+.utill img{}
+
+
+#footer{
+    background:url(../images/bg_footer.gif);
+    margin-top:50px;
+    padding:30px 0;
+}
+#footer p{
+    font-size:12px;
+    color: #de892e
+}
+/*선택자
+#footer>p{}이런거도 있는데 샵푸터안에있는 첫번째p태그(p안에 p태그 여러개있는경우)
+#footer * 이건 모든 선택자*/
+
+.fMenu{
+    padding-bottom: 10px;
+}
+.fMenu li{
+    float: left;
+}
+.fMenu li a{
+    color: #fff;
+    vertical-align: middle;
+    display: inline-block;
+}
+.fMenu li:before{
+    content:"";
+    vertical-align: middle;
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background:#fff;
+    margin: 0 5px;
+}
+.fMenu li:first-child:before{
+    display: none;
+}
+.fMenu li a:after{
+    content: "";
+    display: block;
+    width:100%;
+    height: 1px;
+}
+.fMenu li:hover a:after{
+    background: #fff;/*1px생겨서 텍스트호버시 텍스트가 움직임*/
+}
+
+/*.fMenu li:hover{
+    border-bottom: 1px solid #fff;
+}*/
